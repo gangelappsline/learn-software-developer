@@ -1,0 +1,110 @@
+[
+  {
+    "id": "scratch-lazo-bailarin",
+    "title": "El lazo bailarín",
+    "description": "Enseña a una mascota a dibujar una figura usando repeticiones.",
+    "challenge": "¡La mascota quiere dibujar un cuadrado perfecto! Programa cuatro pasos iguales y gira 90 grados después de cada paso.",
+    "language": "scratch",
+    "difficulty": "easy",
+    "ageGroups": ["6-8", "9-11"],
+    "values": ["creatividad", "logica"],
+    "topic": "Bucles",
+    "xpReward": 45,
+    "coinReward": 12,
+    "estimatedMinutes": 5,
+    "starterCode": "al presionar bandera verde\n\n// Añade un bloque de repetición para dibujar el cuadrado",
+    "solution": "al presionar bandera verde\nrepetir (4)\n  mover (60) pasos\n  girar ↻ (90) grados",
+    "tests": [
+      {
+        "input": "repetir (4)",
+        "expected": "El dibujo repite cuatro lados."
+      },
+      {
+        "input": "mover (60) pasos",
+        "expected": "La mascota avanza en cada lado."
+      },
+      {
+        "input": "girar ↻ (90) grados",
+        "expected": "Cada esquina forma un ángulo recto."
+      }
+    ],
+    "hints": [
+      "¿Cuántos lados tiene un cuadrado?",
+      "Usa un bloque repetir para no escribir las mismas instrucciones cuatro veces.",
+      "Dentro del bucle, combina mover y girar 90 grados."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "scratch-historia-espacial",
+    "title": "Una historia entre estrellas",
+    "description": "Crea un pequeño diálogo que comienza al pulsar una tecla.",
+    "challenge": "El astronauta debe saludar al pulsar la barra espaciadora y después contar qué ve en el espacio. Ordena los eventos para que la historia se entienda.",
+    "language": "scratch",
+    "difficulty": "medium",
+    "ageGroups": ["6-8", "9-11"],
+    "values": ["creatividad", "inclusion"],
+    "topic": "Eventos",
+    "xpReward": 65,
+    "coinReward": 16,
+    "estimatedMinutes": 10,
+    "starterCode": "al presionar tecla [espacio]\n\n// Completa el saludo y el mensaje del astronauta",
+    "solution": "al presionar tecla [espacio]\n  decir [¡Hola, exploradores!] durante (2) segundos\n  decir [Veo una estrella brillante.] durante (3) segundos",
+    "tests": [
+      {
+        "input": "al presionar tecla [espacio]",
+        "expected": "La historia responde a una acción del jugador."
+      },
+      {
+        "input": "decir [¡Hola, exploradores!]",
+        "expected": "El astronauta saluda."
+      },
+      {
+        "input": "durante (3) segundos",
+        "expected": "El segundo mensaje tiene una duración clara."
+      }
+    ],
+    "hints": [
+      "El evento de teclado es el punto de partida.",
+      "Usa dos bloques decir, uno después del otro.",
+      "Dale un poco más de tiempo al segundo mensaje para que se pueda leer."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "scratch-bosque-vivo",
+    "title": "El bosque que respira",
+    "description": "Haz que un árbol crezca poco a poco y recuerde cuidar el planeta.",
+    "challenge": "Anima un árbol para que crezca cuando comienza el programa. Usa un bucle para repetir el cambio de tamaño y añade un mensaje sobre cuidar los bosques.",
+    "language": "scratch",
+    "difficulty": "medium",
+    "ageGroups": ["9-11"],
+    "values": ["sostenibilidad", "perseverancia"],
+    "topic": "Bucles y eventos",
+    "xpReward": 70,
+    "coinReward": 17,
+    "estimatedMinutes": 15,
+    "starterCode": "al presionar bandera verde\n\n// Haz crecer el árbol paso a paso y comparte un mensaje",
+    "solution": "al presionar bandera verde\nrepetir (5)\n  cambiar tamaño por (10)\ndecir [Cada árbol cuenta. ¡Cuidemos el bosque!] durante (3) segundos",
+    "tests": [
+      {
+        "input": "repetir (5)",
+        "expected": "El crecimiento ocurre en cinco pasos."
+      },
+      {
+        "input": "cambiar tamaño por (10)",
+        "expected": "Cada repetición hace crecer el árbol."
+      },
+      {
+        "input": "Cuidemos el bosque",
+        "expected": "El mensaje conecta el código con el cuidado del planeta."
+      }
+    ],
+    "hints": [
+      "Un bucle permite hacer el mismo cambio varias veces.",
+      "Añade el bloque de tamaño dentro de repetir.",
+      "Termina con un mensaje positivo y fácil de leer."
+    ],
+    "validationMode": "tokens"
+  }
+]

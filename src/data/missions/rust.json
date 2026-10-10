@@ -1,0 +1,110 @@
+[
+  {
+    "id": "rust-enum-aventura",
+    "title": "El inventario de la aventura",
+    "description": "Representa objetos distintos con un enum y responde con match.",
+    "challenge": "Crea un enum Objeto con Pocion y Llave. Escribe una función descripcion que devuelva un mensaje distinto para cada objeto usando match.",
+    "language": "rust",
+    "difficulty": "medium",
+    "ageGroups": ["15-17"],
+    "values": ["logica", "creatividad"],
+    "topic": "Enums y match",
+    "xpReward": 90,
+    "coinReward": 21,
+    "estimatedMinutes": 15,
+    "starterCode": "enum Objeto {\n    Pocion,\n    Llave,\n}\n\nfn descripcion(objeto: Objeto) -> &'static str {\n    // Responde a cada variante con match\n    todo!()\n}",
+    "solution": "enum Objeto {\n    Pocion,\n    Llave,\n}\n\nfn descripcion(objeto: Objeto) -> &'static str {\n    match objeto {\n        Objeto::Pocion => \"Recupera energía\",\n        Objeto::Llave => \"Abre una puerta\",\n    }\n}",
+    "tests": [
+      {
+        "input": "enum Objeto",
+        "expected": "El inventario define un tipo enumerado."
+      },
+      {
+        "input": "match objeto",
+        "expected": "La función cubre las variantes del objeto."
+      },
+      {
+        "input": "Objeto::Pocion",
+        "expected": "La poción tiene una respuesta propia."
+      }
+    ],
+    "hints": [
+      "enum define un conjunto cerrado de variantes.",
+      "match compara el valor con cada variante.",
+      "Cada brazo termina con => y una expresión."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "rust-prestamo-seguro",
+    "title": "Préstamo seguro",
+    "description": "Lee un nombre prestado sin transferir su propiedad.",
+    "challenge": "Escribe presentar que reciba una referencia a String y devuelva una referencia a str. El texto debe ser prestado: no muevas ni clones el nombre.",
+    "language": "rust",
+    "difficulty": "hard",
+    "ageGroups": ["15-17"],
+    "values": ["perseverancia", "etica"],
+    "topic": "Ownership y borrowing",
+    "xpReward": 110,
+    "coinReward": 26,
+    "estimatedMinutes": 25,
+    "starterCode": "fn presentar(nombre: &String) -> &str {\n    // Devuelve una vista del nombre\n    nombre\n}",
+    "solution": "fn presentar(nombre: &String) -> &str {\n    nombre.as_str()\n}",
+    "tests": [
+      {
+        "input": "nombre: &String",
+        "expected": "La función toma prestado el nombre."
+      },
+      {
+        "input": "-> &str",
+        "expected": "El resultado también es una referencia."
+      },
+      {
+        "input": "as_str()",
+        "expected": "Se devuelve una vista del texto sin moverlo."
+      }
+    ],
+    "hints": [
+      "El símbolo & indica un préstamo.",
+      "Una referencia a String puede convertirse en &str.",
+      "as_str() entrega una vista del contenido."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "rust-resulto-seguro",
+    "title": "Resultado a salvo",
+    "description": "Modela un resultado que puede tener éxito o un error.",
+    "challenge": "Completa leer_nivel para convertir un texto en número entero. Devuelve Result<i32, ParseIntError> y usa el operador ? para propagar el error.",
+    "language": "rust",
+    "difficulty": "epic",
+    "ageGroups": ["15-17"],
+    "values": ["perseverancia", "critico"],
+    "topic": "Result y errores",
+    "xpReward": 130,
+    "coinReward": 30,
+    "estimatedMinutes": 30,
+    "starterCode": "use std::num::ParseIntError;\n\nfn leer_nivel(texto: &str) -> Result<i32, ParseIntError> {\n    // Convierte el texto y propaga el posible error\n    todo!()\n}",
+    "solution": "use std::num::ParseIntError;\n\nfn leer_nivel(texto: &str) -> Result<i32, ParseIntError> {\n    let nivel = texto.parse::<i32>()?;\n    Ok(nivel)\n}",
+    "tests": [
+      {
+        "input": "Result<i32, ParseIntError>",
+        "expected": "La firma representa éxito o error."
+      },
+      {
+        "input": "parse::<i32>()?",
+        "expected": "El error se propaga sin ocultarlo."
+      },
+      {
+        "input": "Ok(nivel)",
+        "expected": "Un valor válido vuelve como éxito."
+      }
+    ],
+    "hints": [
+      "parse intenta convertir texto a número.",
+      "El operador ? devuelve el error si la conversión falla.",
+      "Envuelve el nivel convertido en Ok."
+    ],
+    "validationMode": "tokens"
+  }
+]

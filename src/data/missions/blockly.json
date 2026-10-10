@@ -1,0 +1,110 @@
+[
+  {
+    "id": "blockly-ruta-robot",
+    "title": "La ruta del robot",
+    "description": "Guía un robot con instrucciones ordenadas y sin pasos de más.",
+    "challenge": "El robot está frente a una meta. Escribe una secuencia clara que avance, gire a la derecha y avance hasta la estrella.",
+    "language": "blockly",
+    "difficulty": "easy",
+    "ageGroups": ["6-8", "9-11"],
+    "values": ["logica", "perseverancia"],
+    "topic": "Secuencias",
+    "xpReward": 45,
+    "coinReward": 12,
+    "estimatedMinutes": 5,
+    "starterCode": "// Usa los bloques en el orden correcto\nmoveForward();\n// añade un giro y otro avance",
+    "solution": "moveForward();\nturnRight();\nmoveForward();",
+    "tests": [
+      {
+        "input": "moveForward();",
+        "expected": "El robot avanza."
+      },
+      {
+        "input": "turnRight();",
+        "expected": "El robot cambia de dirección."
+      },
+      {
+        "input": "moveForward();\nturnRight();\nmoveForward();",
+        "expected": "La secuencia lleva al robot hasta la meta."
+      }
+    ],
+    "hints": [
+      "Las instrucciones se ejecutan de arriba hacia abajo.",
+      "Primero avanza, después gira y vuelve a avanzar.",
+      "Revisa que cada bloque termine antes de empezar el siguiente."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "blockly-coleccion-estrellas",
+    "title": "Coleccionista de estrellas",
+    "description": "Convierte tres movimientos iguales en un bucle elegante.",
+    "challenge": "El robot necesita recoger tres estrellas que están en línea. Usa una repetición para avanzar tres veces y celebrar al final.",
+    "language": "blockly",
+    "difficulty": "medium",
+    "ageGroups": ["9-11", "12-14"],
+    "values": ["logica", "creatividad"],
+    "topic": "Bucles",
+    "xpReward": 65,
+    "coinReward": 16,
+    "estimatedMinutes": 10,
+    "starterCode": "// Sustituye las instrucciones repetidas por un bucle\nfor (let i = 0; i < 0; i++) {\n  // avanza una casilla\n}\n",
+    "solution": "for (let i = 0; i < 3; i++) {\n  moveForward();\n}\ncelebrate();",
+    "tests": [
+      {
+        "input": "i < 3",
+        "expected": "El bucle se repite tres veces."
+      },
+      {
+        "input": "moveForward();",
+        "expected": "Cada vuelta mueve el robot."
+      },
+      {
+        "input": "celebrate();",
+        "expected": "La misión termina con una celebración."
+      }
+    ],
+    "hints": [
+      "Busca qué instrucción se repite en cada casilla.",
+      "El contador empieza en cero y debe llegar a tres.",
+      "Deja la celebración fuera del bucle para que ocurra una sola vez."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "blockly-mapa-secreto",
+    "title": "El mapa secreto",
+    "description": "Toma una decisión distinta según lo que haya delante.",
+    "challenge": "El robot explora un laberinto. Si hay un obstáculo, gira; si el camino está libre, avanza. Representa las dos posibilidades con una condición.",
+    "language": "blockly",
+    "difficulty": "hard",
+    "ageGroups": ["9-11", "12-14"],
+    "values": ["critico", "logica"],
+    "topic": "Condicionales",
+    "xpReward": 85,
+    "coinReward": 20,
+    "estimatedMinutes": 15,
+    "starterCode": "// Comprueba el camino antes de moverte\nif (/* ¿hay un obstáculo? */) {\n  // elige una acción\n} else {\n  // elige otra acción\n}",
+    "solution": "if (obstacleAhead()) {\n  turnRight();\n} else {\n  moveForward();\n}",
+    "tests": [
+      {
+        "input": "if (obstacleAhead())",
+        "expected": "El programa comprueba el entorno."
+      },
+      {
+        "input": "turnRight();",
+        "expected": "El robot evita el obstáculo."
+      },
+      {
+        "input": "else",
+        "expected": "También existe una alternativa para el camino libre."
+      }
+    ],
+    "hints": [
+      "Una condición permite elegir entre dos caminos.",
+      "Usa obstacleAhead() en la condición del if.",
+      "La rama else debe avanzar cuando no haya obstáculos."
+    ],
+    "validationMode": "tokens"
+  }
+]

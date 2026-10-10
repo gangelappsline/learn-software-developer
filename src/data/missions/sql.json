@@ -1,0 +1,110 @@
+[
+  {
+    "id": "sql-menu-colores",
+    "title": "El menú de colores",
+    "description": "Encuentra los colores favoritos en una tabla de ideas.",
+    "challenge": "Consulta la tabla ideas y devuelve el nombre y el color de las ideas que sean de tipo \"arte\". Ordena los resultados por nombre.",
+    "language": "sql",
+    "difficulty": "easy",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["creatividad", "critico"],
+    "topic": "SELECT y WHERE",
+    "xpReward": 60,
+    "coinReward": 15,
+    "estimatedMinutes": 10,
+    "starterCode": "-- Columnas: nombre, color, tipo\nSELECT nombre, color\nFROM ideas\n-- añade filtro y orden",
+    "solution": "SELECT nombre, color\nFROM ideas\nWHERE tipo = 'arte'\nORDER BY nombre;",
+    "tests": [
+      {
+        "input": "SELECT nombre, color",
+        "expected": "La consulta elige las columnas necesarias."
+      },
+      {
+        "input": "WHERE tipo =",
+        "expected": "Solo devuelve ideas del tipo solicitado."
+      },
+      {
+        "input": "ORDER BY nombre",
+        "expected": "Los resultados tienen un orden predecible."
+      }
+    ],
+    "hints": [
+      "SELECT define las columnas de salida.",
+      "WHERE filtra filas según una condición.",
+      "ORDER BY ordena el resultado por una columna."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "sql-equipos-colaboran",
+    "title": "Equipos que colaboran",
+    "description": "Une datos de estudiantes y equipos con una clave compartida.",
+    "challenge": "Combina las tablas estudiantes y equipos para mostrar el nombre de cada estudiante junto al nombre de su equipo. Usa la columna equipo_id para relacionarlas.",
+    "language": "sql",
+    "difficulty": "medium",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["colaboracion", "logica"],
+    "topic": "JOIN",
+    "xpReward": 80,
+    "coinReward": 19,
+    "estimatedMinutes": 15,
+    "starterCode": "SELECT estudiantes.nombre, equipos.nombre\nFROM estudiantes\n-- conecta la tabla equipos",
+    "solution": "SELECT estudiantes.nombre, equipos.nombre\nFROM estudiantes\nJOIN equipos ON estudiantes.equipo_id = equipos.id;",
+    "tests": [
+      {
+        "input": "JOIN equipos",
+        "expected": "La consulta conecta las dos tablas."
+      },
+      {
+        "input": "ON estudiantes.equipo_id = equipos.id",
+        "expected": "La unión usa la clave correcta."
+      },
+      {
+        "input": "SELECT estudiantes.nombre",
+        "expected": "El resultado muestra a cada estudiante."
+      }
+    ],
+    "hints": [
+      "JOIN incorpora otra tabla al resultado.",
+      "ON expresa qué valores relacionan las filas.",
+      "Compara equipo_id con el id de equipos."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "sql-ideas-sostenibles",
+    "title": "Ideas para un planeta mejor",
+    "description": "Cuenta propuestas sostenibles y compara categorías.",
+    "challenge": "En la tabla proyectos, agrupa las propuestas por categoría y cuenta cuántas hay en cada una. Muestra solo categorías con más de una propuesta.",
+    "language": "sql",
+    "difficulty": "hard",
+    "ageGroups": ["15-17"],
+    "values": ["sostenibilidad", "critico"],
+    "topic": "GROUP BY y HAVING",
+    "xpReward": 100,
+    "coinReward": 24,
+    "estimatedMinutes": 20,
+    "starterCode": "SELECT categoria, COUNT(*) AS total\nFROM proyectos\n-- agrupa y filtra las categorías",
+    "solution": "SELECT categoria, COUNT(*) AS total\nFROM proyectos\nGROUP BY categoria\nHAVING COUNT(*) > 1;",
+    "tests": [
+      {
+        "input": "COUNT(*) AS total",
+        "expected": "La consulta cuenta las propuestas."
+      },
+      {
+        "input": "GROUP BY categoria",
+        "expected": "Los resultados se agrupan por categoría."
+      },
+      {
+        "input": "HAVING COUNT(*) > 1",
+        "expected": "Se filtran los grupos con más de una propuesta."
+      }
+    ],
+    "hints": [
+      "COUNT cuenta las filas de cada grupo.",
+      "GROUP BY se aplica antes del filtro de grupos.",
+      "HAVING filtra resultados agregados como COUNT(*)."
+    ],
+    "validationMode": "tokens"
+  }
+]

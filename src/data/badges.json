@@ -1,0 +1,52 @@
+[
+  {
+    "id": "first-step",
+    "name": "Primer paso",
+    "description": "Completa tu primera misión.",
+    "emoji": "👟",
+    "rule": "Completa 1 misión"
+  },
+  {
+    "id": "loop-legend",
+    "name": "Leyenda del bucle",
+    "description": "Repite una idea hasta que funcione.",
+    "emoji": "🔁",
+    "rule": "Completa 3 misiones"
+  },
+  {
+    "id": "week-streak",
+    "name": "Racha estelar",
+    "description": "Vuelve a aprender durante siete días seguidos.",
+    "emoji": "🔥",
+    "rule": "Alcanza una racha de 7 días"
+  },
+  {
+    "id": "curious-mind",
+    "name": "Mente curiosa",
+    "description": "Prueba tres rutas de programación distintas.",
+    "emoji": "🧠",
+    "rule": "Completa misiones en 3 lenguajes"
+  },
+  {
+    "id": "helper",
+    "name": "Buen compañero",
+    "description": "Aprender también es compartir.",
+    "emoji": "🤝",
+    "rule": "Completa 10 misiones"
+  },
+  {
+    "id": "quest-master",
+    "name": "Maestro de misiones",
+    "description": "Has recorrido un gran tramo de CodeQuest.",
+    "emoji": "🏆",
+    "rule": "Completa 20 misiones"
+  },
+  {
+    "id": "night-owl",
+    "name": "Búho curioso",
+    "description": "Encontraste un pequeño secreto nocturno.",
+    "emoji": "🦉",
+    "rule": "Explora la plataforma",
+    "secret": true
+  }
+]

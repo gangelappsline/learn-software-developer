@@ -1,0 +1,122 @@
+[
+  {
+    "id": "scratch",
+    "name": "Scratch",
+    "emoji": "🐱",
+    "tagline": "Imagina. Programa. Comparte.",
+    "description": "Crea historias, animaciones y juegos con bloques visuales.",
+    "ageGroups": ["6-8", "9-11"],
+    "track": "Bloques visuales",
+    "focus": ["Eventos", "Bucles", "Creatividad"],
+    "color": "#ff8b68",
+    "missions": 3
+  },
+  {
+    "id": "blockly",
+    "name": "Blockly",
+    "emoji": "🧩",
+    "tagline": "Bloques que se convierten en código.",
+    "description": "Resuelve retos con bloques y descubre cómo se traducen a JavaScript.",
+    "ageGroups": ["6-8", "9-11", "12-14"],
+    "track": "Bloques → JavaScript",
+    "focus": ["Secuencias", "Condicionales", "Algoritmos"],
+    "color": "#62c8b4",
+    "missions": 3
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "emoji": "🐍",
+    "tagline": "Una idea clara puede hacer de todo.",
+    "description": "Empieza con Turtle y avanza hasta funciones, datos y objetos.",
+    "ageGroups": ["9-11", "12-14", "15-17"],
+    "track": "Turtle + código",
+    "focus": ["Variables", "Bucles", "Funciones"],
+    "color": "#6f9ff8",
+    "missions": 3
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "emoji": "⚡",
+    "tagline": "Dale vida a la web.",
+    "description": "Construye minijuegos, interacciones y experiencias web dinámicas.",
+    "ageGroups": ["9-11", "12-14", "15-17"],
+    "track": "Minijuegos + ES2025",
+    "focus": ["DOM", "Funciones", "Async"],
+    "color": "#f6c95d",
+    "missions": 3
+  },
+  {
+    "id": "htmlcss",
+    "name": "HTML & CSS",
+    "emoji": "🎨",
+    "tagline": "Diseña una web que sea muy tú.",
+    "description": "Crea páginas accesibles y responsive con estructura y estilo.",
+    "ageGroups": ["6-8", "9-11", "12-14", "15-17"],
+    "track": "Tarjetas → Responsive",
+    "focus": ["Semántica", "Flexbox", "Grid"],
+    "color": "#f08b9e",
+    "missions": 3
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "emoji": "🔷",
+    "tagline": "JavaScript con superpoderes.",
+    "description": "Añade tipos, genéricos y confianza a tus programas.",
+    "ageGroups": ["12-14", "15-17"],
+    "track": "Código real",
+    "focus": ["Tipos", "Uniones", "Genéricos"],
+    "color": "#628cf2",
+    "missions": 3
+  },
+  {
+    "id": "sql",
+    "name": "SQL",
+    "emoji": "🗄️",
+    "tagline": "Haz preguntas a los datos.",
+    "description": "Encuentra patrones y conecta información con consultas SQL.",
+    "ageGroups": ["12-14", "15-17"],
+    "track": "Código real",
+    "focus": ["SELECT", "JOIN", "Datos"],
+    "color": "#aa87ed",
+    "missions": 3
+  },
+  {
+    "id": "rust",
+    "name": "Rust",
+    "emoji": "🦀",
+    "tagline": "Pequeño, rápido y a prueba de errores.",
+    "description": "Explora los fundamentos de sistemas con un lenguaje moderno.",
+    "ageGroups": ["15-17"],
+    "track": "Sistemas · avanzado",
+    "focus": ["Ownership", "Enums", "Seguridad"],
+    "color": "#e89a67",
+    "missions": 3
+  },
+  {
+    "id": "kotlin",
+    "name": "Kotlin",
+    "emoji": "📱",
+    "tagline": "Tu primera idea para móvil.",
+    "description": "Aprende la base de Kotlin y diseña lógica para apps móviles.",
+    "ageGroups": ["12-14", "15-17"],
+    "track": "Móvil básico",
+    "focus": ["Nulabilidad", "Clases", "Colecciones"],
+    "color": "#9e83ed",
+    "missions": 3
+  },
+  {
+    "id": "go",
+    "name": "Go",
+    "emoji": "🐹",
+    "tagline": "Simple, rápido y listo para colaborar.",
+    "description": "Descubre funciones, estructuras y concurrencia en Go.",
+    "ageGroups": ["15-17"],
+    "track": "Concurrencia básica",
+    "focus": ["Goroutines", "Canales", "APIs"],
+    "color": "#56bfc7",
+    "missions": 3
+  }
+]
