@@ -1,0 +1,110 @@
+[
+  {
+    "id": "html-tarjeta-planeta",
+    "title": "Una tarjeta para otro planeta",
+    "description": "Diseña una tarjeta de planeta con estructura semántica e imagen accesible.",
+    "challenge": "Crea una tarjeta de planeta dentro de article. Incluye un título, una imagen con texto alternativo y una breve descripción.",
+    "language": "htmlcss",
+    "difficulty": "easy",
+    "ageGroups": ["6-8", "9-11", "12-14"],
+    "values": ["creatividad", "inclusion"],
+    "topic": "HTML semántico",
+    "xpReward": 50,
+    "coinReward": 13,
+    "estimatedMinutes": 10,
+    "starterCode": "<article class=\"planet-card\">\n  <!-- Añade un título, una imagen y una descripción -->\n</article>",
+    "solution": "<article class=\"planet-card\">\n  <img src=\"saturno.jpg\" alt=\"Saturno y sus anillos\">\n  <h2>Saturno</h2>\n  <p>Un planeta gigante con anillos de hielo y roca.</p>\n</article>",
+    "tests": [
+      {
+        "input": "<article",
+        "expected": "La tarjeta usa una estructura semántica."
+      },
+      {
+        "input": "<h2>",
+        "expected": "El planeta tiene un título claro."
+      },
+      {
+        "input": "alt=",
+        "expected": "La imagen incluye una descripción accesible."
+      }
+    ],
+    "hints": [
+      "Un article representa un contenido que tiene sentido por sí mismo.",
+      "Usa un encabezado para el nombre del planeta.",
+      "El texto alt explica la imagen a quien no puede verla."
+    ],
+    "validationMode": "markup"
+  },
+  {
+    "id": "css-galeria-flexible",
+    "title": "Galería flexible",
+    "description": "Ordena tarjetas con Flexbox para que respiren en cualquier pantalla.",
+    "challenge": "Estiliza una galería para que sus tarjetas se coloquen en fila, tengan espacio y puedan pasar a otra línea cuando lo necesiten.",
+    "language": "htmlcss",
+    "difficulty": "medium",
+    "ageGroups": ["9-11", "12-14", "15-17"],
+    "values": ["creatividad", "inclusion"],
+    "topic": "CSS Flexbox",
+    "xpReward": 75,
+    "coinReward": 18,
+    "estimatedMinutes": 15,
+    "starterCode": ".galeria {\n  /* Añade las reglas Flexbox necesarias */\n}",
+    "solution": ".galeria {\n  display: flex;\n  gap: 1rem;\n  flex-wrap: wrap;\n  align-items: center;\n}",
+    "tests": [
+      {
+        "input": "display: flex",
+        "expected": "La galería activa Flexbox."
+      },
+      {
+        "input": "gap:",
+        "expected": "Las tarjetas tienen espacio entre sí."
+      },
+      {
+        "input": "flex-wrap: wrap",
+        "expected": "Las tarjetas se adaptan a pantallas estrechas."
+      }
+    ],
+    "hints": [
+      "La propiedad display inicia un contenedor Flexbox.",
+      "gap crea espacio entre elementos sin añadir márgenes a cada tarjeta.",
+      "flex-wrap permite que la fila continúe en otra línea."
+    ],
+    "validationMode": "markup"
+  },
+  {
+    "id": "css-modo-estelar",
+    "title": "Modo estelar responsive",
+    "description": "Adapta un panel de misión para pantallas pequeñas y grandes.",
+    "challenge": "Haz que el panel ocupe poco espacio en móvil y gane dos columnas a partir de 700 píxeles. Añade un foco visible para navegación con teclado.",
+    "language": "htmlcss",
+    "difficulty": "hard",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["inclusion", "critico"],
+    "topic": "Responsive y accesibilidad",
+    "xpReward": 95,
+    "coinReward": 23,
+    "estimatedMinutes": 20,
+    "starterCode": ".mission-panel {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n\n/* Añade el breakpoint y el estado de foco */",
+    "solution": ".mission-panel {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n@media (min-width: 700px) {\n  .mission-panel { grid-template-columns: 1fr 1fr; }\n}\nbutton:focus-visible { outline: 3px solid #7868e6; outline-offset: 3px; }",
+    "tests": [
+      {
+        "input": "@media",
+        "expected": "El diseño se adapta mediante un breakpoint."
+      },
+      {
+        "input": "min-width: 700px",
+        "expected": "El panel responde a una pantalla más ancha."
+      },
+      {
+        "input": ":focus-visible",
+        "expected": "Los controles muestran foco al navegar con teclado."
+      }
+    ],
+    "hints": [
+      "Empieza con una columna para móvil.",
+      "Usa @media con min-width para cambiar el diseño en pantallas anchas.",
+      "focus-visible mejora la orientación con teclado."
+    ],
+    "validationMode": "markup"
+  }
+]

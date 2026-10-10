@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ts-tipo-avatar",
+    "title": "Avatares con identidad",
+    "description": "Define un tipo que permita solo los avatares que existen en el juego.",
+    "challenge": "Crea un tipo Avatar que acepte \"zorro\", \"panda\" o \"robot\". Después escribe elegirAvatar para devolver el avatar que recibe.",
+    "language": "typescript",
+    "difficulty": "easy",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["logica", "inclusion"],
+    "topic": "Tipos y uniones",
+    "xpReward": 65,
+    "coinReward": 16,
+    "estimatedMinutes": 10,
+    "starterCode": "// Crea aquí el tipo de avatar\n\nfunction elegirAvatar(avatar: Avatar) {\n  return avatar;\n}",
+    "solution": "type Avatar = \"zorro\" | \"panda\" | \"robot\";\n\nfunction elegirAvatar(avatar: Avatar): Avatar {\n  return avatar;\n}",
+    "tests": [
+      {
+        "input": "type Avatar",
+        "expected": "El tipo limita los valores permitidos."
+      },
+      {
+        "input": "\"zorro\" | \"panda\" | \"robot\"",
+        "expected": "Las tres opciones de avatar están incluidas."
+      },
+      {
+        "input": "avatar: Avatar",
+        "expected": "La función usa el tipo Avatar."
+      }
+    ],
+    "hints": [
+      "Un tipo unión se construye con el símbolo |.",
+      "Los valores literales de texto se escriben entre comillas.",
+      "Usa Avatar como tipo del parámetro y del resultado."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "ts-caja-generica",
+    "title": "La caja de cualquier cosa",
+    "description": "Envuelve un valor sin perder el tipo de lo que guardaste.",
+    "challenge": "Escribe una función genérica envolver<T> que devuelva un objeto con una propiedad dato. La misma función debe servir para texto y números.",
+    "language": "typescript",
+    "difficulty": "medium",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["logica", "creatividad"],
+    "topic": "Genéricos",
+    "xpReward": 80,
+    "coinReward": 19,
+    "estimatedMinutes": 15,
+    "starterCode": "function envolver<T>(valor: T) {\n  // Devuelve el valor dentro de la propiedad dato\n  return { dato: valor };\n}",
+    "solution": "function envolver<T>(valor: T): { dato: T } {\n  return { dato: valor };\n}",
+    "tests": [
+      {
+        "input": "function envolver<T>",
+        "expected": "La función define un parámetro de tipo genérico."
+      },
+      {
+        "input": "valor: T",
+        "expected": "El valor mantiene su tipo original."
+      },
+      {
+        "input": "dato: T",
+        "expected": "El resultado conserva el tipo en la propiedad dato."
+      }
+    ],
+    "hints": [
+      "La T representa un tipo que se decide al llamar la función.",
+      "Usa T tanto para el argumento como para el contenido del objeto.",
+      "Puedes anotar el retorno como { dato: T }."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "ts-union-notificacion",
+    "title": "Notificaciones con sentido",
+    "description": "Modela notificaciones distintas con una unión discriminada.",
+    "challenge": "Define los tipos para una notificación de éxito o de error. Escribe describir que use switch sobre kind y devuelva un mensaje útil.",
+    "language": "typescript",
+    "difficulty": "hard",
+    "ageGroups": ["15-17"],
+    "values": ["critico", "etica"],
+    "topic": "Uniones discriminadas",
+    "xpReward": 105,
+    "coinReward": 25,
+    "estimatedMinutes": 20,
+    "starterCode": "// Define Notificacion como una unión discriminada\n\nfunction describir(n: Notificacion): string {\n  switch (n.kind) {\n    // Completa los dos casos\n  }\n  return \"\";\n}",
+    "solution": "type Notificacion =\n  | { kind: \"exito\"; mensaje: string }\n  | { kind: \"error\"; codigo: number };\n\nfunction describir(n: Notificacion): string {\n  switch (n.kind) {\n    case \"exito\": return n.mensaje;\n    case \"error\": return `Error ${n.codigo}`;\n  }\n}",
+    "tests": [
+      {
+        "input": "type Notificacion",
+        "expected": "La unión distingue los tipos de mensaje."
+      },
+      {
+        "input": "kind: \"exito\"",
+        "expected": "La notificación de éxito tiene un discriminante."
+      },
+      {
+        "input": "switch (n.kind)",
+        "expected": "El código decide según el tipo de notificación."
+      }
+    ],
+    "hints": [
+      "Cada miembro de la unión necesita una propiedad kind literal.",
+      "Los tipos pueden tener propiedades diferentes.",
+      "switch sobre n.kind ayuda a estrechar el tipo."
+    ],
+    "validationMode": "tokens"
+  }
+]

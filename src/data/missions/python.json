@@ -1,0 +1,110 @@
+[
+  {
+    "id": "python-turtle-constelacion",
+    "title": "Constelación de cinco puntas",
+    "description": "Dibuja una estrella con Turtle y una repetición.",
+    "challenge": "La tortuga espacial necesita dibujar una estrella. Completa el bucle para avanzar y girar el ángulo correcto cinco veces.",
+    "language": "python",
+    "difficulty": "easy",
+    "ageGroups": ["9-11", "12-14"],
+    "values": ["creatividad", "logica"],
+    "topic": "Bucles",
+    "xpReward": 55,
+    "coinReward": 14,
+    "estimatedMinutes": 10,
+    "starterCode": "import turtle\n\nfor _ in range(5):\n    # mueve la tortuga y gira para dibujar una punta\n    pass",
+    "solution": "import turtle\n\nfor _ in range(5):\n    turtle.forward(100)\n    turtle.right(144)",
+    "tests": [
+      {
+        "input": "for _ in range(5):",
+        "expected": "El bucle dibuja las cinco puntas."
+      },
+      {
+        "input": "turtle.forward(100)",
+        "expected": "La tortuga traza cada lado."
+      },
+      {
+        "input": "turtle.right(144)",
+        "expected": "El giro forma una estrella."
+      }
+    ],
+    "hints": [
+      "Una estrella de cinco puntas tiene cinco lados.",
+      "Dentro del bucle combina forward y right.",
+      "El ángulo exterior para esta estrella es 144 grados."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "python-saludo-personalizado",
+    "title": "Saludo con nombre propio",
+    "description": "Escribe una función que personalice un mensaje para cada jugador.",
+    "challenge": "Crea una función llamada saludar que reciba un nombre y devuelva un saludo. Prueba que la función no dependa de un nombre escrito a mano.",
+    "language": "python",
+    "difficulty": "medium",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["inclusion", "creatividad"],
+    "topic": "Funciones",
+    "xpReward": 75,
+    "coinReward": 18,
+    "estimatedMinutes": 15,
+    "starterCode": "def saludar(nombre):\n    # Devuelve un saludo que incluya el nombre\n    pass",
+    "solution": "def saludar(nombre):\n    return f\"¡Hola, {nombre}! Qué bueno verte en CodeQuest.\"",
+    "tests": [
+      {
+        "input": "def saludar(nombre):",
+        "expected": "La función recibe el nombre como dato."
+      },
+      {
+        "input": "return f",
+        "expected": "La función devuelve un mensaje personalizado."
+      },
+      {
+        "input": "{nombre}",
+        "expected": "El nombre recibido aparece en el saludo."
+      }
+    ],
+    "hints": [
+      "Define una función que acepte un parámetro llamado nombre.",
+      "Usa return para devolver el mensaje, no solo imprimirlo.",
+      "Una f-string permite insertar el valor con llaves."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "python-biblioteca-lectores",
+    "title": "La biblioteca de lectores",
+    "description": "Organiza una lista y crea una función para recomendar lecturas.",
+    "challenge": "Guarda tres libros en una lista y escribe recomendar_libro para devolver el primer título. Después añade una comprobación para una lista vacía.",
+    "language": "python",
+    "difficulty": "hard",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["colaboracion", "critico"],
+    "topic": "Listas y condicionales",
+    "xpReward": 95,
+    "coinReward": 22,
+    "estimatedMinutes": 20,
+    "starterCode": "libros = [\"El jardín secreto\", \"Viaje a Marte\", \"Código creativo\"]\n\ndef recomendar_libro(lista):\n    # Devuelve un libro o un mensaje si no hay títulos\n    pass",
+    "solution": "libros = [\"El jardín secreto\", \"Viaje a Marte\", \"Código creativo\"]\n\ndef recomendar_libro(lista):\n    if not lista:\n        return \"Añade un libro para empezar\"\n    return lista[0]",
+    "tests": [
+      {
+        "input": "def recomendar_libro(lista):",
+        "expected": "La recomendación funciona con una lista recibida."
+      },
+      {
+        "input": "if not lista:",
+        "expected": "Se contempla el caso de una lista vacía."
+      },
+      {
+        "input": "return lista[0]",
+        "expected": "Se devuelve el primer libro disponible."
+      }
+    ],
+    "hints": [
+      "La función debe trabajar con el parámetro lista.",
+      "Comprueba si está vacía antes de consultar el primer elemento.",
+      "En Python, lista[0] es el primer elemento."
+    ],
+    "validationMode": "tokens"
+  }
+]

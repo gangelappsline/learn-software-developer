@@ -1,0 +1,112 @@
+[
+  {
+    "id": "js-doble-puntos",
+    "title": "Puntos extra",
+    "description": "Crea una función que premie a cada jugador con diez puntos extra.",
+    "challenge": "Completa sumarPuntos para recibir la puntuación actual y devolver diez puntos más. El editor ejecutará tres casos diferentes.",
+    "language": "javascript",
+    "difficulty": "easy",
+    "ageGroups": ["9-11", "12-14"],
+    "values": ["logica", "perseverancia"],
+    "topic": "Funciones",
+    "xpReward": 55,
+    "coinReward": 14,
+    "estimatedMinutes": 10,
+    "starterCode": "function sumarPuntos(puntos) {\n  // Devuelve los puntos actuales más 10\n  return 0;\n}",
+    "solution": "function sumarPuntos(puntos) {\n  return puntos + 10;\n}",
+    "tests": [
+      {
+        "input": "0",
+        "expected": "10"
+      },
+      {
+        "input": "12",
+        "expected": "22"
+      },
+      {
+        "input": "-3",
+        "expected": "7"
+      }
+    ],
+    "hints": [
+      "La función recibe un número llamado puntos.",
+      "No cambies el dato original: calcula y devuelve un nuevo valor.",
+      "Prueba con el operador + y el número 10."
+    ],
+    "validationMode": "runtime",
+    "entryPoint": "sumarPuntos"
+  },
+  {
+    "id": "js-contador-estrellas",
+    "title": "Contador de estrellas",
+    "description": "Cuenta solo las estrellas brillantes de una colección.",
+    "challenge": "Completa contarEstrellas para contar cuántos elementos tienen tipo \"estrella\". El valor de entrada será siempre una lista de objetos.",
+    "language": "javascript",
+    "difficulty": "medium",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["critico", "logica"],
+    "topic": "Arrays y funciones",
+    "xpReward": 75,
+    "coinReward": 18,
+    "estimatedMinutes": 15,
+    "starterCode": "function contarEstrellas(items) {\n  // Devuelve cuántos elementos tienen tipo \"estrella\"\n  return 0;\n}",
+    "solution": "function contarEstrellas(items) {\n  return items.filter((item) => item.tipo === \"estrella\").length;\n}",
+    "tests": [
+      {
+        "input": "[{\"tipo\":\"estrella\"},{\"tipo\":\"luna\"}]",
+        "expected": "1"
+      },
+      {
+        "input": "[]",
+        "expected": "0"
+      },
+      {
+        "input": "[{\"tipo\":\"estrella\"},{\"tipo\":\"estrella\"},{\"tipo\":\"nube\"}]",
+        "expected": "2"
+      }
+    ],
+    "hints": [
+      "Puedes recorrer la lista o crear una lista filtrada.",
+      "filter recibe una función que responde true o false.",
+      "La cantidad de resultados está en la propiedad length."
+    ],
+    "validationMode": "runtime",
+    "entryPoint": "contarEstrellas"
+  },
+  {
+    "id": "js-biblioteca-async",
+    "title": "La biblioteca que responde",
+    "description": "Practica la idea de esperar una respuesta asíncrona sin bloquear la app.",
+    "challenge": "Escribe una función async llamada mensajeDeLaBiblioteca. Debe esperar Promise.resolve y devolver el texto \"Libro listo\".",
+    "language": "javascript",
+    "difficulty": "hard",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["perseverancia", "colaboracion"],
+    "topic": "Async y promesas",
+    "xpReward": 95,
+    "coinReward": 23,
+    "estimatedMinutes": 20,
+    "starterCode": "async function mensajeDeLaBiblioteca() {\n  // Espera una promesa que resuelve el mensaje\n  return \"\";\n}",
+    "solution": "async function mensajeDeLaBiblioteca() {\n  const mensaje = await Promise.resolve(\"Libro listo\");\n  return mensaje;\n}",
+    "tests": [
+      {
+        "input": "async function mensajeDeLaBiblioteca",
+        "expected": "La función puede esperar una respuesta."
+      },
+      {
+        "input": "await Promise.resolve",
+        "expected": "El programa espera la promesa."
+      },
+      {
+        "input": "Libro listo",
+        "expected": "La respuesta tiene el texto esperado."
+      }
+    ],
+    "hints": [
+      "La palabra async marca una función asíncrona.",
+      "await pausa esa función hasta que se resuelva la promesa.",
+      "Devuelve el mensaje que llega de Promise.resolve."
+    ],
+    "validationMode": "tokens"
+  }
+]

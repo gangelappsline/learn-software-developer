@@ -1,0 +1,110 @@
+[
+  {
+    "id": "go-saludo-concurrente",
+    "title": "Saludo en equipo",
+    "description": "Lanza una tarea ligera en una goroutine y recibe su resultado por un canal.",
+    "challenge": "Completa saludar para enviar \"¡Hola, equipo!\" por un canal de texto. Usa go para ejecutar enviarSaludo concurrentemente.",
+    "language": "go",
+    "difficulty": "medium",
+    "ageGroups": ["15-17"],
+    "values": ["colaboracion", "logica"],
+    "topic": "Goroutines y canales",
+    "xpReward": 90,
+    "coinReward": 21,
+    "estimatedMinutes": 15,
+    "starterCode": "func enviarSaludo(ch chan string) {\n    // Envía un saludo por el canal\n}\n\nfunc saludar() string {\n    ch := make(chan string)\n    // Inicia enviarSaludo en una goroutine y recibe el mensaje\n    return \"\"\n}",
+    "solution": "func enviarSaludo(ch chan string) {\n    ch <- \"¡Hola, equipo!\"\n}\n\nfunc saludar() string {\n    ch := make(chan string)\n    go enviarSaludo(ch)\n    return <-ch\n}",
+    "tests": [
+      {
+        "input": "go enviarSaludo(ch)",
+        "expected": "El envío comienza en una goroutine."
+      },
+      {
+        "input": "ch <-",
+        "expected": "El emisor escribe en el canal."
+      },
+      {
+        "input": "<-ch",
+        "expected": "La función recibe el mensaje del canal."
+      }
+    ],
+    "hints": [
+      "Un canal conecta al emisor y al receptor.",
+      "go inicia una goroutine.",
+      "El operador <- recibe el dato desde el canal."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "go-contador-ideas",
+    "title": "Contador de ideas",
+    "description": "Cuenta ideas aprobadas con una función sencilla y explícita.",
+    "challenge": "Escribe contarAprobadas para recorrer una lista de valores booleanos y devolver cuántas ideas están aprobadas.",
+    "language": "go",
+    "difficulty": "easy",
+    "ageGroups": ["15-17"],
+    "values": ["logica", "perseverancia"],
+    "topic": "Funciones y slices",
+    "xpReward": 70,
+    "coinReward": 17,
+    "estimatedMinutes": 10,
+    "starterCode": "func contarAprobadas(aprobadas []bool) int {\n    total := 0\n    // Recorre la lista y cuenta los true\n    return total\n}",
+    "solution": "func contarAprobadas(aprobadas []bool) int {\n    total := 0\n    for _, aprobada := range aprobadas {\n        if aprobada { total++ }\n    }\n    return total\n}",
+    "tests": [
+      {
+        "input": "for _, aprobada := range aprobadas",
+        "expected": "La función recorre cada resultado."
+      },
+      {
+        "input": "if aprobada",
+        "expected": "Solo se cuentan las ideas aprobadas."
+      },
+      {
+        "input": "total++",
+        "expected": "El contador aumenta una vez por cada true."
+      }
+    ],
+    "hints": [
+      "range recorre todos los elementos de un slice.",
+      "Usa if para ignorar las ideas no aprobadas.",
+      "Incrementa total cuando aprobada sea true."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "go-equipo-seguro",
+    "title": "API de equipo cuidadosa",
+    "description": "Crea una respuesta HTTP simple y deja claro el código de estado.",
+    "challenge": "Implementa un handler que escriba \"Equipo listo\" y establezca el estado HTTP 200. La respuesta debe ser legible para quien consume la API.",
+    "language": "go",
+    "difficulty": "hard",
+    "ageGroups": ["15-17"],
+    "values": ["etica", "colaboracion"],
+    "topic": "HTTP y APIs",
+    "xpReward": 105,
+    "coinReward": 25,
+    "estimatedMinutes": 20,
+    "starterCode": "func equipoHandler(w http.ResponseWriter, r *http.Request) {\n    // Escribe una respuesta y establece el estado correcto\n}",
+    "solution": "func equipoHandler(w http.ResponseWriter, r *http.Request) {\n    w.WriteHeader(http.StatusOK)\n    fmt.Fprint(w, \"Equipo listo\")\n}",
+    "tests": [
+      {
+        "input": "http.StatusOK",
+        "expected": "La API indica que la petición terminó correctamente."
+      },
+      {
+        "input": "fmt.Fprint",
+        "expected": "La respuesta incluye contenido para el cliente."
+      },
+      {
+        "input": "Equipo listo",
+        "expected": "El cliente recibe el mensaje esperado."
+      }
+    ],
+    "hints": [
+      "net/http ofrece la constante StatusOK.",
+      "fmt.Fprint puede escribir texto en ResponseWriter.",
+      "No olvides importar fmt y net/http en un programa completo."
+    ],
+    "validationMode": "tokens"
+  }
+]

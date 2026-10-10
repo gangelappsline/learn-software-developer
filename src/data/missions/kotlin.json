@@ -1,0 +1,110 @@
+[
+  {
+    "id": "kotlin-saludo-seguro",
+    "title": "Saludo sin sorpresas",
+    "description": "Practica valores opcionales y evita errores con un nombre vacío.",
+    "challenge": "Escribe saludar para recibir un nombre que podría ser null. Si no hay nombre, devuelve \"¡Hola, explorador!\"; de lo contrario usa el nombre recibido.",
+    "language": "kotlin",
+    "difficulty": "easy",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["inclusion", "logica"],
+    "topic": "Nulabilidad",
+    "xpReward": 65,
+    "coinReward": 16,
+    "estimatedMinutes": 10,
+    "starterCode": "fun saludar(nombre: String?): String {\n    // Devuelve un saludo incluso cuando nombre sea null\n    return \"\"\n}",
+    "solution": "fun saludar(nombre: String?): String {\n    val persona = nombre ?: \"explorador\"\n    return \"¡Hola, $persona!\"\n}",
+    "tests": [
+      {
+        "input": "nombre: String?",
+        "expected": "La firma indica que el nombre puede ser null."
+      },
+      {
+        "input": "?:",
+        "expected": "El operador Elvis ofrece un valor alternativo."
+      },
+      {
+        "input": "explorador",
+        "expected": "El saludo funciona aunque falte el nombre."
+      }
+    ],
+    "hints": [
+      "El signo ? permite que String admita null.",
+      "El operador Elvis ?: se usa para crear un valor alternativo.",
+      "Interpolar $persona inserta el texto en el saludo."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "kotlin-lista-misiones",
+    "title": "Misiones favoritas",
+    "description": "Filtra una lista para quedarte con las misiones cortas.",
+    "challenge": "Crea una función misionesCortas que reciba una lista de duraciones y devuelva solo las que duran 15 minutos o menos.",
+    "language": "kotlin",
+    "difficulty": "medium",
+    "ageGroups": ["12-14", "15-17"],
+    "values": ["logica", "perseverancia"],
+    "topic": "Colecciones",
+    "xpReward": 80,
+    "coinReward": 19,
+    "estimatedMinutes": 15,
+    "starterCode": "fun misionesCortas(minutos: List<Int>): List<Int> {\n    // Devuelve las duraciones de 15 minutos o menos\n    return emptyList()\n}",
+    "solution": "fun misionesCortas(minutos: List<Int>): List<Int> {\n    return minutos.filter { it <= 15 }\n}",
+    "tests": [
+      {
+        "input": "List<Int>",
+        "expected": "La función recibe una lista de números enteros."
+      },
+      {
+        "input": "filter",
+        "expected": "La colección conserva solo algunos elementos."
+      },
+      {
+        "input": "it <= 15",
+        "expected": "Se seleccionan misiones de hasta 15 minutos."
+      }
+    ],
+    "hints": [
+      "filter crea una lista con los elementos que cumplen una condición.",
+      "it representa cada duración durante el filtro.",
+      "Usa <= para incluir las misiones de exactamente 15 minutos."
+    ],
+    "validationMode": "tokens"
+  },
+  {
+    "id": "kotlin-estado-app",
+    "title": "El estado de una app",
+    "description": "Agrupa información de una misión en una clase de datos.",
+    "challenge": "Define una data class EstadoMision con titulo, completada y xp. Después crea una función que construya una misión nueva con completada en false.",
+    "language": "kotlin",
+    "difficulty": "hard",
+    "ageGroups": ["15-17"],
+    "values": ["logica", "creatividad"],
+    "topic": "Clases y modelos",
+    "xpReward": 100,
+    "coinReward": 24,
+    "estimatedMinutes": 20,
+    "starterCode": "// Define EstadoMision con título, estado y recompensa\n\nfun nuevaMision(titulo: String, xp: Int): EstadoMision {\n    // Devuelve una misión todavía sin completar\n    TODO()\n}",
+    "solution": "data class EstadoMision(val titulo: String, val completada: Boolean, val xp: Int)\n\nfun nuevaMision(titulo: String, xp: Int): EstadoMision {\n    return EstadoMision(titulo, false, xp)\n}",
+    "tests": [
+      {
+        "input": "data class EstadoMision",
+        "expected": "El modelo agrupa los datos de una misión."
+      },
+      {
+        "input": "completada: Boolean",
+        "expected": "El estado de completado está tipado."
+      },
+      {
+        "input": "EstadoMision(titulo, false, xp)",
+        "expected": "La función crea una misión nueva pendiente."
+      }
+    ],
+    "hints": [
+      "Una data class sirve para transportar datos.",
+      "Incluye título, estado booleano y recompensa XP.",
+      "Una misión nueva empieza con completada en false."
+    ],
+    "validationMode": "tokens"
+  }
+]
